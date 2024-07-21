@@ -20,10 +20,9 @@ spring:
       filter:
         enabled: true
 
-#mobilele:
-#  default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
-#  remember.me.key: ${REMEBER_ME_KEY:topsecret}
-
+catsWorld:
+  default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
+  remember.me.key: ${REMEBER_ME_KEY:topsecret}
 
 logging:
   level:
