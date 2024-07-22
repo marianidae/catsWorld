@@ -17,6 +17,9 @@ public class BreedsEntity extends BaseEntity{
     @OneToMany
     private List<ModelEntity> models;
 
+    @OneToMany
+    private List<GenderEntity> gender;
+
     public String getName() {
         return name;
     }
@@ -32,6 +35,15 @@ public class BreedsEntity extends BaseEntity{
 
     public BreedsEntity setModels(List<ModelEntity> models) {
         this.models = models;
+        return this;
+    }
+
+    public List<GenderEntity> getGender() {
+        return gender;
+    }
+
+    public BreedsEntity setGender(List<GenderEntity> gender) {
+        this.gender = gender;
         return this;
     }
 }

@@ -1,6 +1,7 @@
 package org.softuni.catssss.web;
 
 import org.softuni.catssss.model.dto.CreateOfferDTO;
+import org.softuni.catssss.model.enums.GenderEnum;
 import org.softuni.catssss.model.enums.ModelCategoryEnum;
 import org.softuni.catssss.service.OfferService;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,10 @@ public class OfferController {
         return ModelCategoryEnum.values();
     }
 
+    @ModelAttribute("genders")
+    public GenderEnum[] genders() {
+        return GenderEnum.values();
+    }
     @GetMapping("/all")
     public String all() {
         return "offers";
