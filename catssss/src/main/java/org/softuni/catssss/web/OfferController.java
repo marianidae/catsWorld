@@ -2,7 +2,8 @@ package org.softuni.catssss.web;
 
 import org.softuni.catssss.model.dto.CreateOfferDTO;
 import org.softuni.catssss.model.enums.GenderEnum;
-import org.softuni.catssss.model.enums.ModelCategoryEnum;
+import org.softuni.catssss.model.enums.TypeBreedEnum;
+import org.softuni.catssss.service.BreedsService;
 import org.softuni.catssss.service.OfferService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,14 +16,16 @@ import java.util.UUID;
 public class OfferController {
 
     private final OfferService offerService;
+    private final BreedsService breedsService;
 
-    public OfferController(OfferService offerService) {
+    public OfferController(OfferService offerService, BreedsService breedsService) {
         this.offerService = offerService;
+        this.breedsService = breedsService;
     }
 
     @ModelAttribute("models")
-    public ModelCategoryEnum[] models() {
-        return ModelCategoryEnum.values();
+    public TypeBreedEnum[] models() {
+        return TypeBreedEnum.values();
     }
 
     @ModelAttribute("genders")
@@ -36,6 +39,9 @@ public class OfferController {
 
     @GetMapping("/add")
     public String add(Model model) {
+
+        model.addAttribute("breeds", breedsService.getAllBreeds());
+
         return "offer-add";
     }
 

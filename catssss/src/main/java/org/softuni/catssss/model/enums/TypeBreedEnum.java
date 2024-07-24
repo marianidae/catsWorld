@@ -1,6 +1,6 @@
 package org.softuni.catssss.model.enums;
 
-public enum ModelCategoryEnum {
+public enum TypeBreedEnum {
 
     LONG_HAIRED,
     SEMI_LONG_HAIRED,

@@ -1,10 +1,10 @@
 package org.softuni.catssss.model.dto;
 
 import org.softuni.catssss.model.enums.GenderEnum;
-import org.softuni.catssss.model.enums.ModelCategoryEnum;
+import org.softuni.catssss.model.enums.TypeBreedEnum;
 
 public record CreateOfferDTO(String description,
-                             ModelCategoryEnum model,
+                             TypeBreedEnum model,
                              Long modelId,
                              GenderEnum gender,
                              String imageUrl,

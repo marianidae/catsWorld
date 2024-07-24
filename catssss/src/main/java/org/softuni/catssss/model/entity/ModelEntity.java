@@ -1,16 +1,19 @@
 package org.softuni.catssss.model.entity;
 
 import jakarta.persistence.*;
-import org.softuni.catssss.model.enums.ModelCategoryEnum;
+import org.softuni.catssss.model.enums.TypeBreedEnum;
+
+import java.util.List;
 
 @Entity
 @Table(name = "models")
 public class ModelEntity extends BaseEntity {
 
+    @Column(unique = true, nullable = false)
     private String name;
 
     @Enumerated(EnumType.STRING)
-    private ModelCategoryEnum category;
+    private TypeBreedEnum category;
 
     @ManyToOne
     private BreedsEntity breed;
@@ -24,11 +27,11 @@ public class ModelEntity extends BaseEntity {
         return this;
     }
 
-    public ModelCategoryEnum getCategory() {
+    public TypeBreedEnum getCategory() {
         return category;
     }
 
-    public ModelEntity setCategory(ModelCategoryEnum category) {
+    public ModelEntity setCategory(TypeBreedEnum category) {
         this.category = category;
         return this;
     }
