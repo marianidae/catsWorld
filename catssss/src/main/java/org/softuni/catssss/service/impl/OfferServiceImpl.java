@@ -19,6 +19,7 @@ public class OfferServiceImpl implements OfferService {
 
     @Override
     public UUID createOffer(CreateOfferDTO createOfferDTO) {
-        throw new UnsupportedOperationException("");
+//        throw new UnsupportedOperationException("");
+        return UUID.randomUUID();
     }
 }
