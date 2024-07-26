@@ -24,17 +24,27 @@
         <div class="row">
 
             <div class="form-group col-md-6 mb-3">
-                <label class="text-center text-white font-weight-bold" for="model">Model</label>
-                <select id="model"
-                        name="model"
-
+                <label class="text-center text-white font-weight-bold" for="modelId">Model</label>
+                <select id="modelId"
+                        th:name="modelId"
+                        th:errorclass="is-invalid"
                         class="form-control">
                     <option value="">- Select a model -</option>
-                    <option th:each="m : ${models}"
-                            th:text="${m}"
-                            th:value="${m}"></option>
+                    <optgroup
+                            th:each="breed: ${breeds}"
+                            th:label="${breed.name()}">
+
+                        <option
+                                th:each="model : ${breed.models()}"
+                                th:text="${model.name}"
+                                th:value="${model.id}"
+                                th:selected="*{modelId} == ${model.id}">
+                            Model
+                        </option>
+
+                    </optgroup>
                 </select>
-                <p class="errors alert alert-danger">
+                <p class="invalid-feedback errors alert alert-danger">
                     Vechicle model is required.
                 </p>
             </div>
@@ -118,11 +128,13 @@
             <div class="form-group col-md-6 mb-3">
                 <label for="year" class="text-white font-weight-bold">Year</label>
                 <input id="year"
-                       name="year"
+                       th:name="year"
+                       th:errorclass="is-invalid"
+                       th:field="*{year}"
                        type="number"
                        class="form-control"
                        placeholder="Manufacturing year"/>
-                <p class="errors alert alert-danger">
+                <p class="invalid-feedback errors alert alert-danger">
                     Manufacturing year is required.
                 </p>
             </div>
@@ -140,21 +152,25 @@
         <div class="form-group">
             <label class="text-white font-weight-bold" for="description">Description</label>
             <textarea id="description"
-                      name="description"
+                      th:name="description"
+                      th:errorclass="is-invalid"
+                      th:field="*{description}"
                       type="textarea"
                       class="form-control" rows="3"
                       placeholder="Description"></textarea>
-            <p class="errors alert alert-danger">
+            <p class="invalid-feedback errors alert alert-danger">
                 Description is required.
             </p>
         </div>
         <div class="form-group">
             <label class="text-white font-weight-bold" for="imageUrl">Image URL</label>
             <input id="imageUrl"
-                   name="imageUrl"
+                   th:name="imageUrl"
+                   th:errorclass="is-invalid"
+                   th:field="*{imageUrl}"
                    type="url" class="form-control"
                    placeholder="Put vehicle image URL here">
-            <p class="errors alert alert-danger">
+            <p class="invalid-feedback errors alert alert-danger">
                 Vehicle image URL is required.
             </p>
         </div>
