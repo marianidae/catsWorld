@@ -3,7 +3,6 @@ package org.softuni.catssss.model.entity;
 import jakarta.persistence.*;
 import org.softuni.catssss.model.enums.TypeBreedEnum;
 
-import java.util.List;
 
 @Entity
 @Table(name = "models")

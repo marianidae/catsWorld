@@ -7,9 +7,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
     defer-datasource-initialization: true
-    properties:
-      hibernate:
-        format_sql: true
+
     hibernate:
       ddl-auto: update
   sql:
