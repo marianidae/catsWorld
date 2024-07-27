@@ -24,7 +24,7 @@ public class OfferEntity extends BaseEntity{
 
     private BigDecimal price;
 
-    private int year;
+    private int age;
 
     public String getDescription() {
         return description;
@@ -63,11 +63,11 @@ public class OfferEntity extends BaseEntity{
     }
 
     public int getYear() {
-        return year;
+        return age;
     }
 
-    public OfferEntity setYear(int year) {
-        this.year = year;
+    public OfferEntity setYear(int age) {
+        this.age = age;
         return this;
     }
 

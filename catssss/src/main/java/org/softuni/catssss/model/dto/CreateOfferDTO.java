@@ -11,21 +11,21 @@ public record CreateOfferDTO(
                             @NotEmpty
                             @Size(min = 5, max = 512)
                             String description,
-                             @NotNull
+                             @NotNull(message = "Breed must be provided")
                              TypeBreedEnum typeBreed,
                              @Positive
-                             @NotNull
+                             @NotNull(message = "Model must be provided")
                              Long modelId,
-                             @NotNull
+                             @NotNull(message = "Gender must be provided")
                              GenderEnum gender,
-                             @NotEmpty
+                             @NotEmpty(message = "Image must be provided")
                              String imageUrl,
                              @Positive
-                             @NotNull
+                             @NotNull(message = "Price must be provided")
                              Integer price,
                              @Positive
-                             @NotNull
-                             Integer year) {
+                             @NotNull(message = "Age must be provided")
+                             Integer age) {
 
  public static CreateOfferDTO empty()  {
     return new CreateOfferDTO(null,null,null,null,null,null,null);
