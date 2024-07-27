@@ -6,12 +6,18 @@ import java.util.List;
 
 @Entity
 @Table(name = "breeds")
+@NamedEntityGraph(
+        name = "brandWithModels",
+        attributeNodes = @NamedAttributeNode("models")
+)
 public class BreedsEntity extends BaseEntity{
 
     @Column(unique = true, nullable = false)
     private String name;
 
-    @OneToMany
+    @OneToMany(
+            fetch = FetchType.EAGER,
+            mappedBy = "breed")
     private List<ModelEntity> models;
 
     @OneToMany
