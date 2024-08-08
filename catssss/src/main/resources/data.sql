@@ -8,14 +8,14 @@ INSERT INTO roles (`id`, `role`)
 VALUES
     (1, 'ADMIN'),
     (2, 'USER');
---
--- -- INSERT INTO users_roles(`user_id`, `role_id`)
--- -- VALUES
--- --     (1, 1),
--- --     (1, 2),
--- --     (2, 2);
---
---
+
+INSERT INTO users_roles(`user_id`, `role_id`)
+VALUES
+    (1, 1),
+    (1, 2),
+    (2, 2);
+
+
 INSERT INTO `breeds` (`id`, `name`)
 VALUES
     (1, 'Long Haired'),
