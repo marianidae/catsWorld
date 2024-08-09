@@ -20,6 +20,7 @@ spring:
 
 catsWorld:
   default.admin.pass: ${DEFAULT_ADMIN_PASS:topsecret}
+  remember.me.key: ${REMEBER_ME_KEY:topsecret}
 
 
 logging:

@@ -21,12 +21,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableMethodSecurity
 public class SecurityConfiguration {
 
-//    private final String rememberMeKey;
+    private final String rememberMeKey;
 
-//    public SecurityConfiguration(@Value("${mobilele.remember.me.key}")
-//                                 String rememberMeKey) {
-//        this.rememberMeKey = rememberMeKey;
-//    }
+    public SecurityConfiguration(@Value("${catsWorld.remember.me.key}")
+                                 String rememberMeKey) {
+        this.rememberMeKey = rememberMeKey;
+    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
@@ -43,7 +43,7 @@ public class SecurityConfiguration {
 //                        .requestMatchers("/api/currency/convert").permitAll()
 //                        .requestMatchers(HttpMethod.GET, "/offer/**").permitAll()
 //                        .requestMatchers("/error").permitAll()
-//                        .requestMatchers("/brands").hasRole(UserRoleEnum.ADMIN.name())
+                        .requestMatchers("/breeds").hasRole(UserRoleEnum.ADMIN.name())
                         // all other requests are authenticated.
                         .anyRequest().authenticated()
         ).formLogin(
@@ -68,13 +68,13 @@ public class SecurityConfiguration {
                             // invalidate the HTTP session
                             .invalidateHttpSession(true);
                 }
-//        ).rememberMe(
-//                rememberMe -> {
-//                    rememberMe
-//                            .key(rememberMeKey)
-//                            .rememberMeParameter("rememberme")
-//                            .rememberMeCookieName("rememberme");
-//                }
+        ).rememberMe(
+                rememberMe -> {
+                    rememberMe
+                            .key(rememberMeKey)
+                            .rememberMeParameter("rememberme")
+                            .rememberMeCookieName("rememberme");
+                }
         ).build();
     }
 
