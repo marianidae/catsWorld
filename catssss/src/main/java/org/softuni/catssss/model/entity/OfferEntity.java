@@ -20,6 +20,9 @@ public class OfferEntity extends BaseEntity{
     @ManyToOne
     private ModelEntity model;
 
+    @ManyToOne
+    private UserEntity seller;
+
     private String imageUrl;
 
     private BigDecimal price;
@@ -62,11 +65,11 @@ public class OfferEntity extends BaseEntity{
         return this;
     }
 
-    public int getYear() {
+    public int getAge() {
         return age;
     }
 
-    public OfferEntity setYear(int age) {
+    public OfferEntity setAge(int age) {
         this.age = age;
         return this;
     }
@@ -77,6 +80,15 @@ public class OfferEntity extends BaseEntity{
 
     public OfferEntity setUuid(UUID uuid) {
         this.uuid = uuid;
+        return this;
+    }
+
+    public UserEntity getSeller() {
+        return seller;
+    }
+
+    public OfferEntity setSeller(UserEntity seller) {
+        this.seller = seller;
         return this;
     }
 }

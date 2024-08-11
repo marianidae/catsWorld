@@ -34,10 +34,10 @@ VALUES
     (7, 'ORIENTAL', 4, 'Siamese'),
     (8, 'ORIENTAL', 4, 'Thai');
 
--- -- INSERT INTO `offers` (`id`, `description`, `engine`, `image_url`, `mileage`, `price`, `transmission`, `uuid`, `year`, `model_id`, `seller_id`)
--- -- VALUES
--- --     (1, 'Top Trabi 1!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2223, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db7c', 1985, 5, 1),
--- --     (2, 'Top Trabi 1!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2225, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db71', 1986, 5, 1),
--- --     (3, 'Top Trabi 2!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2227, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db72', 1987, 5, 2),
--- --     (4, 'Top Trabi 2!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2221, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db73', 1988, 5, 2),
--- --     (5, 'Top Trabi 2!', 'PETROL', 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG/1200px-AWZ_Trabant_601S%2C_Verkehrszentrum_des_Deutschen_Museums.JPG', 24000, 2220, 'MANUAL', 'b72e6550-e365-43bf-aab2-b57cafc2db74', 1989, 5, 2);
+INSERT INTO `offers` (`id`, `description`,  `image_url`, `price`, `uuid`, `age` , `model_id`, `seller_id`)
+VALUES
+    (1, 'Big Cat 1!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db7c', 3, 5, 1),
+    (2, 'Big Cat 2!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db71', 4, 5, 1),
+    (3, 'Big Cat 3!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db72', 1, 5, 2),
+    (4, 'Big Cat 4!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db73', 2, 5, 2),
+    (5, 'Big Cat 5!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db74', 1, 5, 2);
