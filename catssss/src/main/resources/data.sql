@@ -34,10 +34,10 @@ VALUES
     (7, 'ORIENTAL', 4, 'Siamese'),
     (8, 'ORIENTAL', 4, 'Thai');
 
-INSERT INTO `offers` (`id`, `description`,  `image_url`, `price`, `uuid`, `age` , `model_id`, `seller_id`)
+INSERT INTO `offers` (`id`, `description`,  `image_url`, `price`, `uuid`, `age` ,`gender`, `model_id`, `seller_id`)
 VALUES
-    (1, 'Big Cat 1!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db7c', 3, 5, 1),
-    (2, 'Big Cat 2!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db71', 4, 5, 1),
-    (3, 'Big Cat 3!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db72', 1, 5, 2),
-    (4, 'Big Cat 4!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db73', 2, 5, 2),
-    (5, 'Big Cat 5!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 24000, 'b72e6550-e365-43bf-aab2-b57cafc2db74', 1, 5, 2);
+    (1, 'Big Cat 1!',  'https://cdn.britannica.com/36/234736-050-4AC5B6D5/Scottish-fold-cat.jpg', 240, 'b72e6550-e365-43bf-aab2-b57cafc2db7c', 3,'MALE', 6, 1),
+    (2, 'Big Cat 2!',  'https://cdn4.focus.bg/fakti/photos/big/861/jestokost-v-montana-trovat-kotki-s-antifriz-1.jpg', 300, 'b72e6550-e365-43bf-aab2-b57cafc2db71', 4,'MALE', 5, 1),
+    (3, 'Big Cat 3!',  'https://trafficnews.bg/news/2022/11/14/nai-skapite-porodi-kotki-sveta-067.jpg', 150, 'b72e6550-e365-43bf-aab2-b57cafc2db72', 1,'MALE', 6, 2),
+    (4, 'Big Cat 4!',  'https://vetworld.bg/wp-content/uploads/2023/07/cat1.png', 170, 'b72e6550-e365-43bf-aab2-b57cafc2db73', 2,'FEMALE', 7, 2),
+    (5, 'Big Cat 5!',  'https://miau.bg/files/1200x800/persian-cat.webp', 230, 'b72e6550-e365-43bf-aab2-b57cafc2db74', 1,'FEMALE', 1, 2);

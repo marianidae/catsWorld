@@ -70,6 +70,7 @@ public class OfferServiceImpl implements OfferService {
                 offerEntity.getModel().getBreed().getName(),
                 offerEntity.getModel().getName(),
                 offerEntity.getAge(),
+                offerEntity.getGender(),
                 offerEntity.getPrice(),
                 offerEntity.getImageUrl());
     }
@@ -80,6 +81,7 @@ public class OfferServiceImpl implements OfferService {
                 offerEntity.getModel().getBreed().getName(),
                 offerEntity.getModel().getName(),
                 offerEntity.getAge(),
+                offerEntity.getGender(),
                 offerEntity.getPrice(),
                 offerEntity.getImageUrl());
     }

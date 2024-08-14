@@ -31,17 +31,5 @@ public class UserRegistrationController {
         return "redirect:/";
     }
 
-//    @PostMapping("/register")
-//    public String register(UserRegistrationDTO userRegistrationDTO,
-//                           @RequestParam("g-recaptcha-response") String reCaptchaResponse) {
-//
-//
-//
-//
-//
-//        userService.registerUser(userRegistrationDTO);
-//
-//        return "redirect:/";
-//    }
 
 }

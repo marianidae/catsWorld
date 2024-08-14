@@ -1,9 +1,9 @@
 package org.softuni.catssss.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import org.hibernate.annotations.JdbcTypeCode;
+import org.softuni.catssss.model.enums.GenderEnum;
 
 import java.math.BigDecimal;
 import java.sql.Types;
@@ -28,6 +28,10 @@ public class OfferEntity extends BaseEntity{
     private BigDecimal price;
 
     private int age;
+
+
+    @Enumerated(EnumType.STRING)
+    private GenderEnum gender;
 
     public String getDescription() {
         return description;
@@ -90,5 +94,13 @@ public class OfferEntity extends BaseEntity{
     public OfferEntity setSeller(UserEntity seller) {
         this.seller = seller;
         return this;
+    }
+
+    public GenderEnum getGender() {
+        return gender;
+    }
+
+    public void setGender(GenderEnum gender) {
+        this.gender = gender;
     }
 }

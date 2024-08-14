@@ -2,6 +2,8 @@ package org.softuni.catssss.model.dto;
 
 
 
+import org.softuni.catssss.model.enums.GenderEnum;
+
 import java.math.BigDecimal;
 
 public record OfferSummaryDTO(
@@ -9,6 +11,7 @@ public record OfferSummaryDTO(
         String breed,
         String model,
         int age,
+        GenderEnum gender,
         BigDecimal price,
         String imageUrl
 ) {
