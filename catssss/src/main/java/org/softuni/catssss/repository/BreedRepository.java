@@ -12,7 +12,7 @@ import java.util.List;
 public interface BreedRepository extends JpaRepository<BreedsEntity, Long> {
 
     @EntityGraph(
-            value = "brandWithModels",
+            value = "breedWithModels",
             attributePaths = "models"
     )
     @Query("SELECT b FROM BreedsEntity b")
